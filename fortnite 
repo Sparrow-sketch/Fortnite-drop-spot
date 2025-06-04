@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zero Build Drop Picker</title>
+  <style>
+    body {
+      background-color: #0f0f0f;
+      color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    h1 {
+      font-size: 3.5em; /* Bigger title */
+      margin-bottom: 40px;
+    }
+
+    #dropLocation {
+      font-size: 2.5em; /* Bigger drop result */
+      margin: 40px 0;
+      color: #00FFAA;
+    }
+
+    button {
+      padding: 20px 40px;
+      font-size: 1.8em; /* Bigger button text */
+      background-color: #007BFF;
+      border: none;
+      border-radius: 12px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎯 Fortnite Drop Picker</h1>
+
+  <div id="dropLocation">Where we droppin'?</div>
+  <button onclick="pickDrop()">Pick a Drop Spot</button>
+
+  <script>
+    const locations = [
+      "Resistance Base", "Flooded Frogs", "Magic Mosses", "Lonewolf Lair", "Brutal Boxcars",
+      "Pumped Power", "First Order Base", "Shiny Shafts", "Outlaw Oasis", "Crime City",
+      "Foxy Floodgate", "Canyon Crossing", "Masked Meadows", "Vader Samurai's Solitude",
+      "Seaport City", "Shining Span", "Kappa Kappa Factory", "Outpost Enclave"
+    ];
+
+    function pickDrop() {
+      const randomIndex = Math.floor(Math.random() * locations.length);
+      document.getElementById('dropLocation').textContent = `🚁 Drop at: ${locations[randomIndex]}!`;
+    }
+  </script>
+</body>
+</html>
